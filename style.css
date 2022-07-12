@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400;500&display=swap');
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/bg-img/cloudy-night.jpg');
+    background-size: cover;
+    font-family: 'Anek Latin', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 0;
+}
+.left-col{
+    z-index: 1;
+    width: 55%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0px 60px 60px;
+}
+.exponent{
+    display: flex;
+    align-items: center
+}
+.exponent .temp{
+    font-size: 100px;
+    font-weight: 500;
+}
+.exponent .city-prop{
+    padding-left: 20px;
+}
+.exponent .city-prop .city-name{
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.exponent .weather-prop{
+    padding-left: 20px;
+}
+.exponent .weather-prop .condition{
+    margin-left: 10px;
+}
+
+.right-col{
+    z-index: 1;
+    width: 45%;
+    height: 100vh;
+    background: rgba(110,110,110,0.25);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(110,110,110,0.3);
+    padding: 40px 30px;
+    color: rgba(225,225,225,0.7);
+    font-size: 18px;
+}   
+form{
+    width: 100%;
+}
+.search{
+    background: none;
+    border: none;
+    outline: none;
+    padding-bottom: 8px;
+    font-size: 18px;
+    color: rgba(225,225,225,0.7);
+    border-bottom: 1.4px solid rgba(225,225,225,0.7);
+    font-family: 'Anek Latin', sans-serif;
+    width: 70%;
+}
+.search::placeholder{
+    color: rgba(225,225,225,0.7);
+}
+.search:focus::placeholder {
+    color: transparent;
+}
+.submit{
+    background: none;
+    border: none;
+    font-size: 23px;
+    color: rgba(225,225,225,0.7);
+    cursor: pointer;
+    padding-left: 15px;
+}
+.cities{
+    margin-top: 20px;
+}
+.city{
+    margin: 35px 0px;
+    cursor: pointer;
+}
+.city:hover{
+    color: white;
+}
+.details{
+    margin-top: 80px;
+}
+.details h3{
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+}
+.detail-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0px;
+}

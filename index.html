@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+            <div class="left-col">
+                <h2>the weather</h2>
+                <div class="exponent">
+                    <h1 class="temp">8&#176;</h1>
+                    <div class="city-prop">
+                        <h2 class="city-name">Belgrade</h2>
+                        <div class="city-date">
+                            <span class="city-time">14:01</span>
+                            <span class="city-day">-Friday 9, 10 2022</span>
+                        </div>
+                    </div>
+                    <div class="weather-prop">
+                        <img class="icon" src="./assets/64x64/day/113.png" alt="weatherImg">
+                        <p class="condition">Sunny</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col">
+                <form>
+                    <input type="text" class="search" placeholder="Search Location...">
+                    <button type="submit" class="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div id='cities' class="cities">
+                    <!-- <p class="city">New York</p>
+                    <p class="city">California</p>
+                    <p class="city">Paris</p>
+                    <p class="city">Tokyo</p> -->
+                </div>
+                <div class="details">
+                    <h3>Weather Details</h3>
+                    <div class="detail-row">
+                        <span>Cloudy</span>
+                        <span class="cloudy">89%</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Humidity</span>
+                        <span class="humidity">63%</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Wind</span>
+                        <span class="wind">15.1km/h</span>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
