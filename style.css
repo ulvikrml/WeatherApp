@@ -10,6 +10,7 @@ main{
     width: 100%;
     height: 100vh;
     background-image: url('./assets/bg-img/cloudy-night.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Anek Latin', sans-serif;
     display: flex;
@@ -122,4 +123,54 @@ form{
     display: flex;
     justify-content: space-between;
     margin: 35px 0px;
+}
+
+@media screen and (max-width: 792px) {
+    main{
+        flex-direction: column;
+        height: 100%;
+    }
+    .left-col{
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 30px;
+    }
+    .exponent{
+        margin-top: 20px;
+    }
+    .exponent .temp{
+        font-size: 80px;
+    }
+    .exponent .city-prop .city-name{
+        font-size: 38px;
+    }
+    .exponent .weather-prop img{
+        width: 60px;
+        margin-bottom: -7px;
+    }
+    
+    .right-col{
+        width: 100%;
+        margin-top: -430px;
+        padding: 30px 30px;
+        height: 80%;
+    }   
+    .city{
+        margin: 25px 0px;
+    }
+    .detail-row{
+        margin: 25px 0px;
+    }
+}
+@media screen and (max-width: 376px) {
+    .exponent{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .exponent .city-prop{
+        padding-left: 0px;
+    }
+    .right-col{
+        margin-top: -350px;
+    }
 }
