@@ -10,6 +10,10 @@ const icon = document.querySelector('.icon');
 const city = document.querySelectorAll('.city');
 const cities = document.querySelector('.cities');
 const apiKey = 'ac69ba83e3794eb2ba3135150221207';
+const errBox = document.querySelector('.error-box');
+const submitBtn = document.querySelector('.submit');
+const searchInput = document.querySelector('.search');
+const form = document.querySelector('form');
 
 let cityArr = ['New York', 'California City', 'Paris', 'Tokyo'];
 
@@ -69,8 +73,8 @@ const getWeatherData = (city) => {
             const even = (element) => element == dataName;
             const isActive = cityArr.some(even);
 
-            const addCitytoArray = () =>{
-                cityArr.pop();  
+            const addCitytoArray = () => {
+                cityArr.pop();
                 cityArr.unshift(dataName);
             }
 
@@ -78,12 +82,22 @@ const getWeatherData = (city) => {
 
             addCities();
             chooseCity()
+        })
+        .catch(err => {
+            errBox.classList.add('show');
+            errBox.classList.add('showAlert');
+            errBox.classList.remove('hide');
+            searchInput.disabled = true;
+            setTimeout(() => {
+                errBox.classList.add('hide');
+                errBox.classList.remove('show');
+                errBox.classList.remove('showAlert');
+                searchInput.disabled = false;
+            }, 2000)
+
+
         });
 }
-
-const submitBtn = document.querySelector('.submit');
-const searchInput = document.querySelector('.search');
-const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
